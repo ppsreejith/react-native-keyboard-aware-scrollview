@@ -108,7 +108,7 @@ export default class KeyboardAwareBase extends Component {
   _onKeyboardWillHide(event) {
     const keyboardHeight = this.state.keyboardHeight;
     this.setState({keyboardHeight: 0});
-      const y = (this._keyboardAwareView && this.keyboardAwareView.contentOffset)?this._keyboardAwareView.contentOffset.y: 0;
+      const y = (this._keyboardAwareView && this._keyboardAwareView.contentOffset)?this._keyboardAwareView.contentOffset.y: 0;
     const yOffset = Math.max(y - keyboardHeight, 0);
     this._keyboardAwareView.scrollTo({x: 0, y: yOffset, animated: true});
   }
